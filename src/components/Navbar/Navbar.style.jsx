@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledDiv = styled.div`
+  background: transparent;
+
   .inner-nav {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
