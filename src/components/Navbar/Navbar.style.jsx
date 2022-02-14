@@ -2,16 +2,18 @@ import styled from 'styled-components';
 
 export const StyledDiv = styled.div`
   background: transparent;
-
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
   .inner-nav {
     position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    width: 95%;
-    max-width: 1500px;
-    margin: auto;
+    width: 100%;
     img {
       width: 100%;
       max-width: 130px;
@@ -24,18 +26,11 @@ export const StyledDiv = styled.div`
     }
     .sidebar-btn {
       display: flex;
-      background: #000;
-      color: white;
-      border: none;
-      padding: 0.4rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1.3rem;
     }
   }
 
   /* MEDIA */
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .inner-nav {
       .menu-items {
         display: flex;
@@ -50,12 +45,6 @@ export const StyledDiv = styled.div`
       }
       .sign-in-btn {
         display: inline;
-        background: #000;
-        color: white;
-        border: none;
-        padding: 0.5rem;
-        border-radius: 5px;
-        cursor: pointer;
       }
       .sidebar-btn {
         display: none;
