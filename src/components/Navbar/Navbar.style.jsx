@@ -6,14 +6,12 @@ export const StyledDiv = styled.div`
   max-width: 1000px;
   margin: auto;
   .inner-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
     width: 100%;
+
     img {
       width: 100%;
       max-width: 130px;
