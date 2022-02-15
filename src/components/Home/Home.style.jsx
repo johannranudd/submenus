@@ -48,9 +48,10 @@ export const StyledDiv = styled.div`
           max-width: 500px;
         }
         p {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           letter-spacing: 0.1rem;
           line-height: 1.9rem;
+          width: 90%;
         }
       }
       .phone-img {
@@ -61,5 +62,18 @@ export const StyledDiv = styled.div`
     }
   }
   @media (min-width: 1200px) {
+    .homepage-container {
+      .text-container {
+        h2 {
+          font-size: 4.2rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+      .phone-img {
+        width: 240px;
+      }
+    }
   }
 `;
