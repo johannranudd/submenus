@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const StyledDiv = styled.div`
   background: transparent;
-  width: 100%;
-  max-width: 1000px;
+  width: 95%;
+  max-width: 1100px;
   margin: auto;
   .inner-nav {
     display: flex;
@@ -15,6 +15,7 @@ export const StyledDiv = styled.div`
     img {
       width: 100%;
       max-width: 130px;
+      margin-left: -15px;
     }
     .menu-items {
       display: none;
@@ -34,10 +35,11 @@ export const StyledDiv = styled.div`
         display: flex;
         align-items: center;
         li {
-          a {
-            display: inline-block;
-            padding: 1rem;
-            color: #000;
+          .menu-btn {
+            background: transparent;
+            border-radius: 0;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
           }
         }
       }

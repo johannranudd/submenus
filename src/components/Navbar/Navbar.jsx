@@ -13,7 +13,7 @@ const Navbar = () => {
           {sublinks.map((item, index) => {
             return (
               <li key={index}>
-                <a href='#'>{item.page}</a>
+                <button className='menu-btn'>{item.page}</button>
               </li>
             );
           })}
