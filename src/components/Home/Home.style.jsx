@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledDiv = styled.div`
-  position: absolute;
-  top: 0;
+  /* position: absolute;
+  top: 0; */
   width: 100%;
   .hero {
     position: absolute;
@@ -57,7 +57,7 @@ export const StyledDiv = styled.div`
       .phone-img {
         display: flex !important;
         width: 200px;
-        margin: auto;
+        margin-left: auto;
       }
     }
   }

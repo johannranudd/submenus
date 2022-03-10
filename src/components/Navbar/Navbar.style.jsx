@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledDiv = styled.div`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background: transparent;
   width: 95%;
   max-width: 1100px;
@@ -25,6 +29,7 @@ export const StyledDiv = styled.div`
     }
     .sidebar-btn {
       display: flex;
+      cursor: pointer;
     }
   }
 
