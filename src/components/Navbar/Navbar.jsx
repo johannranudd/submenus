@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { StyledDiv } from './Navbar.style';
 import { images } from '../../images/images';
 import sublinks from '../../data';
@@ -36,30 +36,34 @@ const Navbar = () => {
 };
 
 const MenuButtons = ({ item }) => {
-  // console.log(item);
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+  const { closeSubmenu, isSubmenuOpen, btnRef } = useGlobalContext();
+  // console.log(isSubmenuOpen);
 
-  useEffect(() => {
-    console.log(isSubmenuOpen);
-  }, [isSubmenuOpen]);
+  // useEffect(() => {
+  //   console.log(btnRef);
+  // }, [isSubmenuOpen]);
+
+  // const closeSubmenu = (e) => {
+  //   const submenu = e.currentTarget.nextElementSibling;
+  // };
 
   return (
     <>
       <li>
         <button
           className='menu-btn'
-          onMouseEnter={() => setIsSubmenuOpen(true)}
-          // onMouseLeave={() => setIsSubmenuOpen(false)}
+          onMouseEnter={() => closeSubmenu}
+          ref={btnRef}
         >
           {item.page}
         </button>
-        {isSubmenuOpen && <Submenu />}
+        {isSubmenuOpen && <h1>zsdgfsdfg</h1>}
       </li>
     </>
   );
 };
 
-const Submenu = () => {
-  return <h1>zsdgfsdfg</h1>;
-};
+// const Submenu = () => {
+//   return ;
+// };
 export default Navbar;

@@ -1,16 +1,29 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useRef } from 'react';
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+  const btnRef = useRef();
 
   const handleSidebar = () => {
     setSidebarIsOpen(!sidebarIsOpen);
-    // console.log(sidebarIsOpen);
+  };
+  const closeSubmenu = (e) => {
+    // setIsSubmenuOpen(!isSubmenuOpen);
+    console.log(e.target);
   };
   return (
-    <AppContext.Provider value={{ handleSidebar, sidebarIsOpen }}>
+    <AppContext.Provider
+      value={{
+        handleSidebar,
+        sidebarIsOpen,
+        closeSubmenu,
+        isSubmenuOpen,
+        btnRef,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
