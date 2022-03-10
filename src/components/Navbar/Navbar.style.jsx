@@ -23,6 +23,9 @@ export const StyledDiv = styled.div`
     }
     .menu-items {
       display: none;
+      .submenu {
+        display: none;
+      }
     }
     .sign-in-btn {
       display: none;
