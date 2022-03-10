@@ -17,6 +17,7 @@ export const StyledDiv = styled.div`
     .inner-sidebar {
       width: 95%;
       height: 95%;
+      max-width: 600px;
       background: white;
       .close-sidebar-btn {
         display: flex;
@@ -25,12 +26,18 @@ export const StyledDiv = styled.div`
       }
       .sublinks-container {
         padding: 0 2rem;
+        > div {
+          margin-bottom: 2rem;
+          h4 {
+            margin-bottom: 1rem;
+          }
+        }
         ul {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1rem;
           a {
-            display: inline-block;
-            /* width: 200px; */
+            color: #445d70;
           }
         }
       }
@@ -38,5 +45,12 @@ export const StyledDiv = styled.div`
   }
   .show-sidebar {
     transform: scale(1, 1);
+  }
+
+  /* MEDIA */
+  @media (min-width: 800px) {
+    .sidebar {
+      display: none;
+    }
   }
 `;
