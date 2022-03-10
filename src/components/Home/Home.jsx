@@ -4,9 +4,9 @@ import { images } from '../../images/images';
 import { useGlobalContext } from '../../context';
 
 const Home = () => {
-  const { closeSubmenu } = useGlobalContext();
+  // const { closeSubmenu } = useGlobalContext();
   return (
-    <StyledDiv onMouseEnter={(e) => closeSubmenu(e)}>
+    <StyledDiv>
       <img className='hero' src={images.hero} alt='background gradient' />
       <section className='homepage-container'>
         <div className='text-container'>
