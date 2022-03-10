@@ -18,10 +18,25 @@ export const StyledDiv = styled.div`
       width: 95%;
       height: 95%;
       background: white;
+      .close-sidebar-btn {
+        display: flex;
+        margin: 1rem;
+        margin-left: auto;
+      }
+      .sublinks-container {
+        padding: 0 2rem;
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          a {
+            display: inline-block;
+            /* width: 200px; */
+          }
+        }
+      }
     }
   }
   .show-sidebar {
     transform: scale(1, 1);
-    /* border: 1rem solid rgba(000, 000, 000, 0.5); */
   }
 `;

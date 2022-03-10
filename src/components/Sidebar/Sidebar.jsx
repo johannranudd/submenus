@@ -2,8 +2,10 @@ import React from 'react';
 import { StyledDiv } from './Sidebar.style';
 import { useGlobalContext } from '../../context';
 import { AiOutlineClose } from 'react-icons/ai';
+import sublinks from '../../data';
 
 const Sidebar = () => {
+  //   console.log(sublinks);
   const { sidebarIsOpen, handleSidebar } = useGlobalContext();
   return (
     <StyledDiv>
@@ -12,10 +14,35 @@ const Sidebar = () => {
           <button className='close-sidebar-btn' onClick={handleSidebar}>
             <AiOutlineClose />
           </button>
-          <h1>sidebar</h1>
+          <SubLinks />
         </div>
       </div>
     </StyledDiv>
+  );
+};
+
+const SubLinks = () => {
+  return (
+    <div className='sublinks-container'>
+      {sublinks.map((item, index) => {
+        return (
+          <div key={index}>
+            <h4>{item.page}</h4>
+            <ul>
+              {item.links.map((link, index) => {
+                const { label, icon, url } = link;
+                return (
+                  <a href={url} key={index}>
+                    <span>{icon}</span>
+                    {label}
+                  </a>
+                );
+              })}
+            </ul>
+          </div>
+        );
+      })}
+    </div>
   );
 };
 
