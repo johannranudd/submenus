@@ -7,6 +7,8 @@ const AppProvider = ({ children }) => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [currentBtn, setCurrentBtn] = useState(null);
+  const [centerOfBtn, setCenterOfBtn] = useState(null);
+  const [bottomOfBtn, setBottomOfBtn] = useState(null);
 
   const handleSidebar = () => {
     setSidebarIsOpen(!sidebarIsOpen);
@@ -19,7 +21,18 @@ const AppProvider = ({ children }) => {
   const openSubmenu = (e) => {
     setIsSubmenuOpen(true);
     setCurrentBtn(e.target.dataset.id);
-    // console.log(currentBtn);
+    const left = e.target.getBoundingClientRect().left;
+    const right = e.target.getBoundingClientRect().right;
+    const bottom = e.target.getBoundingClientRect().bottom;
+    const xx = e.target.getBoundingClientRect().x;
+    // console.log(xx);
+    // const xx = e.target.getBoundingClientRect().x;
+    // console.log(e.target.getBoundingClientRect().width);
+    const add = right + left;
+    const center = add / 2;
+    // console.log(xx + left - right);
+    setCenterOfBtn(center);
+    setBottomOfBtn(bottom);
   };
   return (
     <AppContext.Provider
@@ -30,6 +43,8 @@ const AppProvider = ({ children }) => {
         isSubmenuOpen,
         openSubmenu,
         currentBtn,
+        centerOfBtn,
+        bottomOfBtn,
       }}
     >
       {children}

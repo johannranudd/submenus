@@ -22,14 +22,7 @@ const Navbar = () => {
         <img src={images.logo} alt='' />
         <ul className='menu-items'>
           {sublinks.map((item, index) => {
-            return (
-              <MenuButtons
-                key={index}
-                item={item}
-                // isSubmenuOpen={isSubmenuOpen}
-                // setIsSubmenuOpen={setIsSubmenuOpen}
-              />
-            );
+            return <MenuButtons key={index} item={item} />;
           })}
         </ul>
         <button className='sign-in-btn'>Sign in</button>

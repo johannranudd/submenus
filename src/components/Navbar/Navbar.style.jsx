@@ -41,7 +41,7 @@ export const StyledDiv = styled.div`
         align-items: center;
         li {
           .menu-btn {
-            background: transparent;
+            background: black;
             border-radius: 0;
             padding: 1rem 2rem;
             font-size: 1.2rem;
