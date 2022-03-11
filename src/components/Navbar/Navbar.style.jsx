@@ -45,6 +45,7 @@ export const StyledDiv = styled.div`
             border-radius: 0;
             padding: 1rem 2rem;
             font-size: 1.2rem;
+            z-index: 99;
           }
         }
       }

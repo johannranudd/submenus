@@ -8,10 +8,16 @@ import { useGlobalContext } from '../../context';
 // import { useNavbarLogic } from './Navbar.logic';
 
 const Navbar = () => {
-  const { handleSidebar } = useGlobalContext();
+  const { handleSidebar, closeSubmenu } = useGlobalContext();
+
+  const handleSubmenu = (e) => {
+    if (!e.target.classList.contains('menu-btn')) {
+      closeSubmenu();
+    }
+  };
 
   return (
-    <StyledDiv>
+    <StyledDiv onMouseOver={handleSubmenu}>
       <nav className='inner-nav'>
         <img src={images.logo} alt='' />
         <ul className='menu-items'>
