@@ -5,6 +5,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [currentBtn, setCurrentBtn] = useState(null);
   const [centerOfBtn, setCenterOfBtn] = useState(null);
@@ -24,13 +25,9 @@ const AppProvider = ({ children }) => {
     const left = e.target.getBoundingClientRect().left;
     const right = e.target.getBoundingClientRect().right;
     const bottom = e.target.getBoundingClientRect().bottom;
-    const xx = e.target.getBoundingClientRect().x;
-    // console.log(xx);
     // const xx = e.target.getBoundingClientRect().x;
-    // console.log(e.target.getBoundingClientRect().width);
     const add = right + left;
     const center = add / 2;
-    // console.log(xx + left - right);
     setCenterOfBtn(center);
     setBottomOfBtn(bottom);
   };

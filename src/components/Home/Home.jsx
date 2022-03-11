@@ -5,7 +5,7 @@ import { useGlobalContext } from '../../context';
 
 const Home = () => {
   const { closeSubmenu } = useGlobalContext();
-  // onMouseEnter={(e) => closeSubmenu(e)}
+
   return (
     <StyledDiv onMouseEnter={(e) => closeSubmenu(e)}>
       <img className='hero' src={images.hero} alt='background gradient' />

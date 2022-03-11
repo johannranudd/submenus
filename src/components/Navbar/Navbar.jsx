@@ -4,8 +4,6 @@ import { images } from '../../images/images';
 import sublinks from '../../data';
 import { FaBars } from 'react-icons/fa';
 import { useGlobalContext } from '../../context';
-// import { handleSubmenu } from './Navbar.logic';
-// import { useNavbarLogic } from './Navbar.logic';
 
 const Navbar = () => {
   const { handleSidebar, closeSubmenu } = useGlobalContext();

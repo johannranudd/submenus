@@ -29,18 +29,20 @@ const Submenu = () => {
         {sublinks.map((item, index) => {
           if (item.page === currentBtn) {
             return (
-              <div key={index}>
+              <ul key={index}>
                 <h4>{item.page}</h4>
-                {item.links.map((links, index) => {
-                  const { label, icon, url } = links;
-                  return (
-                    <a href={url} key={index}>
-                      <span>{icon}</span>
-                      {label}
-                    </a>
-                  );
-                })}
-              </div>
+                <li>
+                  {item.links.map((links, index) => {
+                    const { label, icon, url } = links;
+                    return (
+                      <a href={url} key={index}>
+                        <span>{icon}</span>
+                        <p>{label}</p>
+                      </a>
+                    );
+                  })}
+                </li>
+              </ul>
             );
           }
         })}
