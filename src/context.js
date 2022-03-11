@@ -5,20 +5,21 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
-  const btnRef = useRef();
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+  const [currentBtn, setCurrentBtn] = useState(null);
 
   const handleSidebar = () => {
     setSidebarIsOpen(!sidebarIsOpen);
   };
+
+  // submenu
   const closeSubmenu = (e) => {
-    btnRef.current.style.display = 'none';
+    setIsSubmenuOpen(false);
   };
-  const openSubmenu = (e, btnRef) => {
-    if (e.target !== btnRef.current.previousSibling) {
-      btnRef.current.style.display = 'block';
-      console.log('yes');
-    }
-    console.log(btnRef.current.previousSibling);
+  const openSubmenu = (e) => {
+    setIsSubmenuOpen(true);
+    setCurrentBtn(e.target.dataset.id);
+    // console.log(currentBtn);
   };
   return (
     <AppContext.Provider
@@ -26,9 +27,9 @@ const AppProvider = ({ children }) => {
         handleSidebar,
         sidebarIsOpen,
         closeSubmenu,
-        // isSubmenuOpen,
+        isSubmenuOpen,
         openSubmenu,
-        btnRef,
+        currentBtn,
       }}
     >
       {children}

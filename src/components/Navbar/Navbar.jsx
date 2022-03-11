@@ -36,33 +36,21 @@ const Navbar = () => {
 };
 
 const MenuButtons = ({ item }) => {
-  const { closeSubmenu, isSubmenuOpen, setIsSubmenuOpen, openSubmenu, btnRef } =
-    useGlobalContext();
-  // const btnRef = useRef();
-  // const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-
-  // useEffect(() => {
-  //   btnRef.current.style.display = 'none';
-  // }, []);
+  const { openSubmenu } = useGlobalContext();
 
   return (
     <>
       <li>
         <button
           className='menu-btn'
-          onMouseEnter={(e) => openSubmenu(e, btnRef)}
+          data-id={item.page}
+          onMouseEnter={(e) => openSubmenu(e)}
         >
           {item.page}
         </button>
-        <h1 ref={btnRef} className='submenu'>
-          zsdgfsdfg
-        </h1>
       </li>
     </>
   );
 };
 
-// const Submenu = () => {
-//   return ;
-// };
 export default Navbar;
