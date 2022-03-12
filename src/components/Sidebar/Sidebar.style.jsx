@@ -19,6 +19,7 @@ export const StyledDiv = styled.div`
       height: 95%;
       max-width: 600px;
       background: white;
+      border-radius: 5px;
       .close-sidebar-btn {
         display: flex;
         margin: 1rem;
@@ -30,6 +31,8 @@ export const StyledDiv = styled.div`
           margin-bottom: 2rem;
           h4 {
             margin-bottom: 1rem;
+            font-size: 1.1rem;
+            text-transform: capitalize;
           }
         }
         ul {
@@ -37,7 +40,14 @@ export const StyledDiv = styled.div`
           grid-template-columns: repeat(2, 1fr);
           grid-gap: 1rem;
           a {
+            display: flex;
+            align-items: center;
             color: #445d70;
+            text-transform: capitalize;
+            span {
+              display: flex;
+              margin-right: 0.3rem;
+            }
           }
         }
       }

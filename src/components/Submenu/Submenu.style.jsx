@@ -25,12 +25,11 @@ export const StyledDiv = styled.div`
       transform: rotate(45deg) translateX(-50%);
     }
     ul {
-      /* display: grid;
-      place-items: center; */
       margin-left: 2rem;
       h4 {
         margin-bottom: 1rem;
         font-size: 1.1rem;
+        text-transform: capitalize;
       }
       li {
         display: grid;
@@ -41,8 +40,10 @@ export const StyledDiv = styled.div`
           display: flex;
           align-items: center;
           color: #445d70;
+          text-transform: capitalize;
           span {
             display: flex;
+            margin-right: 0.3rem;
           }
         }
       }

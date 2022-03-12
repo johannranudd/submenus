@@ -34,7 +34,7 @@ const SubLinks = () => {
                 return (
                   <a href={url} key={index}>
                     <span>{icon}</span>
-                    {label}
+                    <p>{label}</p>
                   </a>
                 );
               })}
