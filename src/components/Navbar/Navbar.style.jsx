@@ -6,7 +6,7 @@ export const StyledDiv = styled.div`
   left: 50%;
   transform: translateX(-50%);
   background: transparent;
-  width: 95%;
+  width: 90%;
   max-width: 1100px;
   margin: auto;
   .inner-nav {

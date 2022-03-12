@@ -3,21 +3,23 @@ import styled from 'styled-components';
 export const StyledDiv = styled.div`
   /* position: absolute;
   top: 0; */
-  width: 100%;
+  /* width: 100%; */
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
   .hero {
     position: absolute;
     top: 0;
     z-index: -9;
+    width: 120vh;
     min-width: 100vw;
-    width: 180vh;
   }
   .homepage-container {
     width: 90%;
-    height: 100vh;
     margin: auto;
+    margin-top: 10rem;
     max-width: 1100px;
     display: grid;
-    /* place-items: center; */
     align-items: center;
     .text-container {
       max-width: 500px;
