@@ -9,6 +9,7 @@ export const StyledDiv = styled.div`
   width: 90%;
   max-width: 1100px;
   margin: auto;
+  z-index: 1;
   .inner-nav {
     display: flex;
     justify-content: space-between;

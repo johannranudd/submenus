@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledDiv = styled.div`
   /* background-color: rgba(000, 000, 000, 0.5); */
   .sidebar {
+    z-index: 2;
     transform: scale(0, 0);
     position: absolute;
     top: 0;
