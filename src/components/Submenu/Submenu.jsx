@@ -12,7 +12,7 @@ const Submenu = () => {
     let width = submenuRef.current.getBoundingClientRect().width;
     submenuRef.current.style.position = 'absolute';
     submenuRef.current.style.left = `${centerOfBtn - width / 2}px`;
-    submenuRef.current.style.top = `${bottomOfBtn}px`;
+    submenuRef.current.style.top = `${bottomOfBtn - 3}px`;
   }, [centerOfBtn]);
 
   useEffect(() => {

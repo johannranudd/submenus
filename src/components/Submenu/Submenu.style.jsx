@@ -13,6 +13,7 @@ export const StyledDiv = styled.div`
     max-width: 400px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
+    z-index: 9;
     ::after {
       position: absolute;
       top: 3px;
