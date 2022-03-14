@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { StyledDiv } from './Navbar.style';
 import { images } from '../../images/images';
 import sublinks from '../../data';

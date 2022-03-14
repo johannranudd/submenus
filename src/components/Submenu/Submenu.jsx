@@ -17,6 +17,7 @@ const Submenu = () => {
 
   useEffect(() => {
     submenuRef.current.style.position = 'absolute';
+    submenuRef.current.style.top = '70px';
     submenuRef.current.style.left = '40%';
   }, []);
 
